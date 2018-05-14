@@ -1,0 +1,119 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 1px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  color: #B94A48;
+  background-color: #F2DEDE;
+  border: 1px solid #EED3D7;
+}
+
+.parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+textarea {
+    max-width: 100%;
+    resize: none;
+    max-height: 800px;
+}
+
+body {
+    background-image: url("/images/background.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#container {
+    box-shadow: 0 2px 80px yellowgreen inset;
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    font: 17px Calibri, sans-serif;
+}
+
+#main-navigation {
+    border-radius: 10px;
+    padding: 20px 0;
+    background-color: #5d9732;
+}
+
+#main-navigation .nav-link {
+    color: #fff;
+    font-size: 1.3rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.dark-green {
+    background-color: darkgreen;
+    color: #fff;
+    
+    &:hover {
+        background-color: lighten(darkgreen, 2%);
+    }
+}
+
+footer {
+    background-color: darkgreen;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.segoe-ui {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-heading {
+    color: #102f08;
+    border-bottom: 2px solid #102f08;
+}
+
+label {
+    font-weight: bolder;
+    color: darkcyan;
+}
+
+input.form-control,
+select.form-control,
+textarea.form-control {
+    border: 1px dashed #102f08 !important;
+}
