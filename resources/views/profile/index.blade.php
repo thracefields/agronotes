@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-7">
         <form action="{{ route('profile.store') }}" method="POST" enctype="multipart/form-data" data-parsley-validate>
-            {{ csrf_field() }}
+            @csrf
             <fieldset class="form-group">
                 <label>Име</label>
                 <input type="text" class="form-control" value="{{ Auth::user()->name }}" readonly>

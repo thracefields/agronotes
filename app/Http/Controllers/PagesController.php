@@ -65,4 +65,8 @@ class PagesController extends Controller
         $articles = Article::where('name', 'LIKE', '%' . $data . '%')->paginate(10);
         return view('articles.search')->withArticles($articles);
     }
+
+    public function underConstruction() {
+        return view('under-construction');
+    }
 }

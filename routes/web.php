@@ -16,6 +16,7 @@ Route::get('/', 'PagesController@getWelcome');
 Route::get('contact', 'PagesController@getContact')->middleware('auth')->name('contact');
 Route::post('contact', 'PagesController@postContact')->middleware('auth')->name('contact.send');
 Route::get('users', 'PagesController@getUsers')->middleware('auth');
+Route::get('under-construction', 'PagesController@underConstruction');
 
 // Tasks
 Route::resource('tasks', 'TaskController', ['except' => 'destroy']);
