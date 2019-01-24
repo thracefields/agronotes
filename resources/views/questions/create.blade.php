@@ -6,7 +6,7 @@
     <div class="col-md-8">
     <h2>Задайте своя въпрос</h2>
         <form action="{{ route('questions.store') }}" method="POST" data-parsley-validate>
-            {{ csrf_field() }}
+            @csrf
             <fieldset class="form-group">
                 <label>Bъпрос</label>
                 <textarea class="form-control" name="body" rows="5" required></textarea>

@@ -10,8 +10,7 @@
                 <a href="{{ route('questions.create') }}" class="p-2 btn btn-primary btn-block"><i class="fas fa-plus"></i> Задай въпрос</a>
             </div>
         </div>
-        @if($questions->count() > 0)
-            @foreach($questions as $question)
+            @forelse($questions as $question)
             <div class="p-2">
                 <p class="bg-success rounded text-white m-0 p-2">{{ $question->body }}</p>
                 <p class="text-right m-0 mb-1"><strong>Зададен от:</strong> <a href="{{ route('profile.show',$question->user->profile->id) }}">{{ $question->user->name }}</a></p>
@@ -22,11 +21,12 @@
                     <p class="alert alert-info"><strong>Отговор: </strong>{{ $question->response }}</p>
                 @endisset
             </div>
-            @endforeach
+            @empty
+            <div class="mt-2">
+                <p class="alert alert-info">Все още не сте задавали въпроси!</p>
+            </div>
+            @endforelse
         {{ $questions->links() }}
-        @else
-        <p>Все още не сте задавали въпроси!</p>
-        @endif
     </div>
 </div>
 @endsection

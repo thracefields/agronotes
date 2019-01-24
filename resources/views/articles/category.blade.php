@@ -23,7 +23,7 @@
         </div>
             @endforeach
 
-            <div class="p-2">{{ $articles->links() }}</div>
+            <div class="p-2">{{ $articles->onEachSide(3)->links() }}</div>
             </div>
         </div>
     </div>            

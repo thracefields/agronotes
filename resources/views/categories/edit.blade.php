@@ -5,7 +5,7 @@
     <div class="col-md-8">
     <h2 class="app-heading">Редактиране на категория</h2>
     <form method="POST" action="{{ route('categories.update', $category->id) }}" data-parsley-validate>
-        {{ csrf_field() }}
+        @csrf
         <input type="hidden" name="_method" value="PATCH">
         <fieldset class="form-group">
             <label>Заглавие</label>

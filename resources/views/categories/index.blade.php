@@ -30,7 +30,7 @@
             </div>
             <div class="col-md">
                 <form action="{{ route('categories.store') }}" method="POST" data-parsley-validate>
-                    {{ csrf_field() }}
+                    @csrf
                     <h2 class="app-heading">Нова категория</h2>
                     <fieldset class="form-group">
                         <label for="name">Име</label>
